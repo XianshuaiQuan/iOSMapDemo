@@ -19,6 +19,7 @@
 		3F584542262304D3001F8A66 /* ReverseGeoCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F584541262304D3001F8A66 /* ReverseGeoCodeViewController.m */; };
 		3F58454F26230838001F8A66 /* MMTGeoCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F58454E26230838001F8A66 /* MMTGeoCodeView.m */; };
 		3F5845582623085A001F8A66 /* MMTReverseGeoCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5845572623085A001F8A66 /* MMTReverseGeoCodeView.m */; };
+		3F58456526247648001F8A66 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F58456426247648001F8A66 /* CoreLocation.framework */; };
 		E6F6218D1F38FBE74DC3EAEC /* libPods-MTGeoCode.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D3C8E8464AB7344E5EA4710 /* libPods-MTGeoCode.a */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +66,7 @@
 		3F58454E26230838001F8A66 /* MMTGeoCodeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMTGeoCodeView.m; sourceTree = "<group>"; };
 		3F5845562623085A001F8A66 /* MMTReverseGeoCodeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMTReverseGeoCodeView.h; sourceTree = "<group>"; };
 		3F5845572623085A001F8A66 /* MMTReverseGeoCodeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMTReverseGeoCodeView.m; sourceTree = "<group>"; };
+		3F58456426247648001F8A66 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		7D3C8E8464AB7344E5EA4710 /* libPods-MTGeoCode.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MTGeoCode.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C3722A1A04455C975879D6F /* Pods-MTGeoCode.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTGeoCode.debug.xcconfig"; path = "Target Support Files/Pods-MTGeoCode/Pods-MTGeoCode.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -74,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F58456526247648001F8A66 /* CoreLocation.framework in Frameworks */,
 				E6F6218D1F38FBE74DC3EAEC /* libPods-MTGeoCode.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -189,13 +192,13 @@
 				8C3722A1A04455C975879D6F /* Pods-MTGeoCode.debug.xcconfig */,
 				0A7083F20F693CAD70B861A2 /* Pods-MTGeoCode.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
 		D4E31D81528DEE3979464106 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3F58456426247648001F8A66 /* CoreLocation.framework */,
 				7D3C8E8464AB7344E5EA4710 /* libPods-MTGeoCode.a */,
 			);
 			name = Frameworks;

@@ -7,10 +7,14 @@
 
 #import "GeoCodeViewController.h"
 #import "ReverseGeoCodeViewController.h"
+#import "MMTGeoCodeView.h"
+#import <Masonry/Masonry.h>
+#import <CoreLocation/CoreLocation.h>
 
 @interface GeoCodeViewController ()
 
 @property (nonatomic, strong) ReverseGeoCodeViewController *reverseViewController;
+@property (nonatomic, strong) MMTGeoCodeView *geoCodeView;
 
 @end
 
@@ -20,6 +24,19 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self setNavigationController];
+    
+    [self loadSubViews];
+}
+
+#pragma mark - loadSubViews
+- (void)loadSubViews {
+    [self.view addSubview:self.geoCodeView];
+    [self.geoCodeView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.view.mas_top);
+        make.left.mas_equalTo(self.view.mas_left);
+        make.bottom.mas_equalTo(self.view.mas_bottom);
+        make.right.mas_equalTo(self.view.mas_right);
+    }];
 }
 
 #pragma mark - navigationController
@@ -33,12 +50,38 @@
     [self.navigationController pushViewController:self.reverseViewController animated:YES];
 }
 
+#pragma mark - geoCodeViewButton
+- (void)geoCodeViewButton {
+    CLGeocoder *coder = [[CLGeocoder alloc] init];
+    
+    [coder geocodeAddressString:self.geoCodeView.adressTextFild.text completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
+        if (placemarks.count == 0 || error) {
+            NSLog(@"解析出错");
+            self.geoCodeView.detailAdressValue.text = @"解析出错";
+        }
+        for (CLPlacemark *placemark in placemarks) {
+            CLLocation *location = placemark.location;
+            [self.geoCodeView adverseGeoCodeWithLat:location.coordinate.latitude andLog:location.coordinate.longitude  andAdressName:placemark.name];
+        }
+    }];
+    
+    [self.geoCodeView endEditing:YES];
+}
+
 #pragma mark - lazy
 - (ReverseGeoCodeViewController *)reverseViewController {
     if (!_reverseViewController) {
         _reverseViewController = [[ReverseGeoCodeViewController alloc] init];
     }
     return _reverseViewController;
+}
+
+- (MMTGeoCodeView *)geoCodeView {
+    if (!_geoCodeView) {
+        _geoCodeView = [[MMTGeoCodeView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+        [_geoCodeView.geoCodeButton addTarget:self action:@selector(geoCodeViewButton) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _geoCodeView;
 }
 
 @end

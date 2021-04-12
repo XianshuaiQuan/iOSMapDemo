@@ -7,17 +7,13 @@
 
 #import "MMTGeoCodeView.h"
 #import <Masonry/Masonry.h>
+#import <CoreLocation/CoreLocation.h>
 
-@interface MMTGeoCodeView()
+@interface MMTGeoCodeView()<UITextFieldDelegate>
 
-@property (nonatomic, strong) UITextField *adressTextFild;
-@property (nonatomic, strong) UIButton *geoCodeButton;
 @property (nonatomic, strong) UILabel *latName;
-@property (nonatomic, strong) UILabel *latValue;
 @property (nonatomic, strong) UILabel *logName;
-@property (nonatomic, strong) UILabel *logValue;
 @property (nonatomic, strong) UILabel *detailAdressName;
-@property (nonatomic, strong) UILabel *detailAdressValue;
 
 @end
 
@@ -25,8 +21,8 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
-        [self layoutSubviews];
         [self loadSubViews];
+        [self layoutSubviews];
     }
     return self;
 }
@@ -45,14 +41,81 @@
 
 #pragma mark - layoutSubViews
 - (void)layoutSubviews {
+    [self.adressTextFild mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(120);
+        make.left.mas_equalTo(self.mas_left).offset(20);
+        make.right.mas_equalTo(self.mas_right).offset(-20);
+        make.height.mas_equalTo(100);
+    }];
+    
+    [self.geoCodeButton mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.adressTextFild.mas_bottom).offset(50);
+        make.centerX.mas_equalTo(self.adressTextFild.mas_centerX);
+        make.size.mas_equalTo(CGSizeMake(200, 100));
+    }];
+    
+    [self.latName mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.geoCodeButton.mas_bottom).offset(50);
+        make.left.mas_equalTo(self.adressTextFild.mas_left);
+        make.size.mas_equalTo(CGSizeMake(80, 50));
+    }];
+    
+    [self.latValue mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.geoCodeButton.mas_bottom).offset(50);
+        make.left.mas_equalTo(self.latName.mas_right).offset(10);
+        make.right.mas_equalTo(self.mas_right).offset(-20);
+        make.height.mas_equalTo(50);
+    }];
+    
+    [self.logName mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.latName.mas_bottom).offset(50);
+        make.left.mas_equalTo(self.latName.mas_left);
+        make.size.mas_equalTo(CGSizeMake(80, 50));
+    }];
+    
+    [self.logValue mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.latValue.mas_bottom).offset(50);
+        make.left.mas_equalTo(self.logName.mas_right).offset(10);
+        make.right.mas_equalTo(self.mas_right).offset(-20);
+        make.height.mas_equalTo(50);
+    }];
+    
+    [self.detailAdressName mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.logName.mas_bottom).offset(50);
+        make.left.mas_equalTo(self.logName.mas_left);
+        make.size.mas_equalTo(CGSizeMake(140, 50));
+    }];
+    
+    [self.detailAdressValue mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.mas_equalTo(self.logValue.mas_bottom).offset(50);
+        make.left.mas_equalTo(self.detailAdressName.mas_right).offset(10);
+        make.right.mas_equalTo(self.mas_right).offset(-20);
+    }];
+    
+    [self layoutIfNeeded];
     
 }
+
+#pragma mark - buttonAction
+- (void)adverseGeoCodeWithLat:(CGFloat)lat andLog:(CGFloat)log andAdressName:(NSString *)name   {
+    self.latValue.text = [NSString stringWithFormat:@"%f",lat];
+    self.logValue.text = [NSString stringWithFormat:@"%f",log];
+    self.detailAdressValue.text = name;
+}
+
 
 #pragma mark - lazy
 - (UITextField *)adressTextFild {
     if (!_adressTextFild) {
         _adressTextFild = [[UITextField alloc] init];
         _adressTextFild.font = [UIFont systemFontOfSize:25];
+        _adressTextFild.placeholder = @"请输入地址";
+        _adressTextFild.borderStyle = UITextBorderStyleRoundedRect;
+        _adressTextFild.clearButtonMode = UITextFieldViewModeWhileEditing;
+        
+        _adressTextFild.keyboardType = UIKeyboardTypeDefault;
+        _adressTextFild.delegate = self;
+        
     }
     return _adressTextFild;
 }
@@ -71,6 +134,7 @@
         _latName = [[UILabel alloc] init];
         _latName.text = @"经度：";
         _latName.font = [UIFont systemFontOfSize:25];
+//        _latName.backgroundColor = [UIColor yellowColor];
     }
     return _latName;
 }
@@ -79,6 +143,7 @@
     if (!_latValue) {
         _latValue = [[UILabel alloc] init];
         _latValue.font = [UIFont systemFontOfSize:25];
+//        _latValue.backgroundColor = [UIColor greenColor];
     }
     return _latValue;
 }
@@ -96,6 +161,7 @@
     if (!_logValue) {
         _logValue = [[UILabel alloc] init];
         _logValue.font = [UIFont systemFontOfSize:25];
+//        _logValue.backgroundColor = [UIColor greenColor];
     }
     return _logValue;
 }
@@ -113,6 +179,10 @@
     if (!_detailAdressValue) {
         _detailAdressValue = [[UILabel alloc] init];
         _detailAdressValue.font = [UIFont systemFontOfSize:25];
+        _detailAdressValue.numberOfLines = 0;
+        _detailAdressValue.textAlignment = NSTextAlignmentJustified;
+        
+//        _detailAdressValue.backgroundColor = [UIColor greenColor];
     }
     return _detailAdressValue;
 }
