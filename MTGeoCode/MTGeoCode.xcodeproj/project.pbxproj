@@ -1,0 +1,685 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3F584505262300FE001F8A66 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F584504262300FE001F8A66 /* AppDelegate.m */; };
+		3F584508262300FE001F8A66 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F584507262300FE001F8A66 /* SceneDelegate.m */; };
+		3F58450B262300FE001F8A66 /* GeoCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F58450A262300FE001F8A66 /* GeoCodeViewController.m */; };
+		3F58450E262300FE001F8A66 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F58450C262300FE001F8A66 /* Main.storyboard */; };
+		3F58451026230100001F8A66 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F58450F26230100001F8A66 /* Assets.xcassets */; };
+		3F58451326230100001F8A66 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F58451126230100001F8A66 /* LaunchScreen.storyboard */; };
+		3F58451626230100001F8A66 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F58451526230100001F8A66 /* main.m */; };
+		3F58452026230100001F8A66 /* MTGeoCodeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F58451F26230100001F8A66 /* MTGeoCodeTests.m */; };
+		3F58452B26230100001F8A66 /* MTGeoCodeUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F58452A26230100001F8A66 /* MTGeoCodeUITests.m */; };
+		3F584542262304D3001F8A66 /* ReverseGeoCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F584541262304D3001F8A66 /* ReverseGeoCodeViewController.m */; };
+		3F58454F26230838001F8A66 /* MMTGeoCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F58454E26230838001F8A66 /* MMTGeoCodeView.m */; };
+		3F5845582623085A001F8A66 /* MMTReverseGeoCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F5845572623085A001F8A66 /* MMTReverseGeoCodeView.m */; };
+		3F58456526247648001F8A66 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F58456426247648001F8A66 /* CoreLocation.framework */; };
+		E6F6218D1F38FBE74DC3EAEC /* libPods-MTGeoCode.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D3C8E8464AB7344E5EA4710 /* libPods-MTGeoCode.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3F58451C26230100001F8A66 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3F5844F8262300FE001F8A66 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3F5844FF262300FE001F8A66;
+			remoteInfo = MTGeoCode;
+		};
+		3F58452726230100001F8A66 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3F5844F8262300FE001F8A66 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3F5844FF262300FE001F8A66;
+			remoteInfo = MTGeoCode;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0A7083F20F693CAD70B861A2 /* Pods-MTGeoCode.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTGeoCode.release.xcconfig"; path = "Target Support Files/Pods-MTGeoCode/Pods-MTGeoCode.release.xcconfig"; sourceTree = "<group>"; };
+		3F584500262300FE001F8A66 /* MTGeoCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MTGeoCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F584503262300FE001F8A66 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3F584504262300FE001F8A66 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3F584506262300FE001F8A66 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
+		3F584507262300FE001F8A66 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
+		3F584509262300FE001F8A66 /* GeoCodeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeoCodeViewController.h; sourceTree = "<group>"; };
+		3F58450A262300FE001F8A66 /* GeoCodeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeoCodeViewController.m; sourceTree = "<group>"; };
+		3F58450D262300FE001F8A66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3F58450F26230100001F8A66 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3F58451226230100001F8A66 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3F58451426230100001F8A66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F58451526230100001F8A66 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3F58451B26230100001F8A66 /* MTGeoCodeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MTGeoCodeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F58451F26230100001F8A66 /* MTGeoCodeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTGeoCodeTests.m; sourceTree = "<group>"; };
+		3F58452126230100001F8A66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F58452626230100001F8A66 /* MTGeoCodeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MTGeoCodeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F58452A26230100001F8A66 /* MTGeoCodeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTGeoCodeUITests.m; sourceTree = "<group>"; };
+		3F58452C26230100001F8A66 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F584540262304D3001F8A66 /* ReverseGeoCodeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReverseGeoCodeViewController.h; sourceTree = "<group>"; };
+		3F584541262304D3001F8A66 /* ReverseGeoCodeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReverseGeoCodeViewController.m; sourceTree = "<group>"; };
+		3F58454D26230838001F8A66 /* MMTGeoCodeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMTGeoCodeView.h; sourceTree = "<group>"; };
+		3F58454E26230838001F8A66 /* MMTGeoCodeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMTGeoCodeView.m; sourceTree = "<group>"; };
+		3F5845562623085A001F8A66 /* MMTReverseGeoCodeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMTReverseGeoCodeView.h; sourceTree = "<group>"; };
+		3F5845572623085A001F8A66 /* MMTReverseGeoCodeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMTReverseGeoCodeView.m; sourceTree = "<group>"; };
+		3F58456426247648001F8A66 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		7D3C8E8464AB7344E5EA4710 /* libPods-MTGeoCode.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MTGeoCode.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C3722A1A04455C975879D6F /* Pods-MTGeoCode.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MTGeoCode.debug.xcconfig"; path = "Target Support Files/Pods-MTGeoCode/Pods-MTGeoCode.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3F5844FD262300FE001F8A66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F58456526247648001F8A66 /* CoreLocation.framework in Frameworks */,
+				E6F6218D1F38FBE74DC3EAEC /* libPods-MTGeoCode.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F58451826230100001F8A66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F58452326230100001F8A66 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3F5844F7262300FE001F8A66 = {
+			isa = PBXGroup;
+			children = (
+				3F584502262300FE001F8A66 /* MTGeoCode */,
+				3F58451E26230100001F8A66 /* MTGeoCodeTests */,
+				3F58452926230100001F8A66 /* MTGeoCodeUITests */,
+				3F584501262300FE001F8A66 /* Products */,
+				55D2F043AB09941BFD05384D /* Pods */,
+				D4E31D81528DEE3979464106 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3F584501262300FE001F8A66 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3F584500262300FE001F8A66 /* MTGeoCode.app */,
+				3F58451B26230100001F8A66 /* MTGeoCodeTests.xctest */,
+				3F58452626230100001F8A66 /* MTGeoCodeUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3F584502262300FE001F8A66 /* MTGeoCode */ = {
+			isa = PBXGroup;
+			children = (
+				3F584509262300FE001F8A66 /* GeoCodeViewController.h */,
+				3F58450A262300FE001F8A66 /* GeoCodeViewController.m */,
+				3F584540262304D3001F8A66 /* ReverseGeoCodeViewController.h */,
+				3F584541262304D3001F8A66 /* ReverseGeoCodeViewController.m */,
+				3F58454C262307D6001F8A66 /* View */,
+				3F58453C26230166001F8A66 /* AppLifeTime */,
+				3F58453B2623015C001F8A66 /* Others */,
+			);
+			path = MTGeoCode;
+			sourceTree = "<group>";
+		};
+		3F58451E26230100001F8A66 /* MTGeoCodeTests */ = {
+			isa = PBXGroup;
+			children = (
+				3F58451F26230100001F8A66 /* MTGeoCodeTests.m */,
+				3F58452126230100001F8A66 /* Info.plist */,
+			);
+			path = MTGeoCodeTests;
+			sourceTree = "<group>";
+		};
+		3F58452926230100001F8A66 /* MTGeoCodeUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3F58452A26230100001F8A66 /* MTGeoCodeUITests.m */,
+				3F58452C26230100001F8A66 /* Info.plist */,
+			);
+			path = MTGeoCodeUITests;
+			sourceTree = "<group>";
+		};
+		3F58453B2623015C001F8A66 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				3F58450C262300FE001F8A66 /* Main.storyboard */,
+				3F58450F26230100001F8A66 /* Assets.xcassets */,
+				3F58451126230100001F8A66 /* LaunchScreen.storyboard */,
+				3F58451426230100001F8A66 /* Info.plist */,
+				3F58451526230100001F8A66 /* main.m */,
+			);
+			name = Others;
+			sourceTree = "<group>";
+		};
+		3F58453C26230166001F8A66 /* AppLifeTime */ = {
+			isa = PBXGroup;
+			children = (
+				3F584503262300FE001F8A66 /* AppDelegate.h */,
+				3F584504262300FE001F8A66 /* AppDelegate.m */,
+				3F584506262300FE001F8A66 /* SceneDelegate.h */,
+				3F584507262300FE001F8A66 /* SceneDelegate.m */,
+			);
+			name = AppLifeTime;
+			sourceTree = "<group>";
+		};
+		3F58454C262307D6001F8A66 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3F58454D26230838001F8A66 /* MMTGeoCodeView.h */,
+				3F58454E26230838001F8A66 /* MMTGeoCodeView.m */,
+				3F5845562623085A001F8A66 /* MMTReverseGeoCodeView.h */,
+				3F5845572623085A001F8A66 /* MMTReverseGeoCodeView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		55D2F043AB09941BFD05384D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8C3722A1A04455C975879D6F /* Pods-MTGeoCode.debug.xcconfig */,
+				0A7083F20F693CAD70B861A2 /* Pods-MTGeoCode.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		D4E31D81528DEE3979464106 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3F58456426247648001F8A66 /* CoreLocation.framework */,
+				7D3C8E8464AB7344E5EA4710 /* libPods-MTGeoCode.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3F5844FF262300FE001F8A66 /* MTGeoCode */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F58452F26230100001F8A66 /* Build configuration list for PBXNativeTarget "MTGeoCode" */;
+			buildPhases = (
+				FD0D4594E12AC0E917EC234D /* [CP] Check Pods Manifest.lock */,
+				3F5844FC262300FE001F8A66 /* Sources */,
+				3F5844FD262300FE001F8A66 /* Frameworks */,
+				3F5844FE262300FE001F8A66 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MTGeoCode;
+			productName = MTGeoCode;
+			productReference = 3F584500262300FE001F8A66 /* MTGeoCode.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3F58451A26230100001F8A66 /* MTGeoCodeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F58453226230100001F8A66 /* Build configuration list for PBXNativeTarget "MTGeoCodeTests" */;
+			buildPhases = (
+				3F58451726230100001F8A66 /* Sources */,
+				3F58451826230100001F8A66 /* Frameworks */,
+				3F58451926230100001F8A66 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3F58451D26230100001F8A66 /* PBXTargetDependency */,
+			);
+			name = MTGeoCodeTests;
+			productName = MTGeoCodeTests;
+			productReference = 3F58451B26230100001F8A66 /* MTGeoCodeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3F58452526230100001F8A66 /* MTGeoCodeUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F58453526230100001F8A66 /* Build configuration list for PBXNativeTarget "MTGeoCodeUITests" */;
+			buildPhases = (
+				3F58452226230100001F8A66 /* Sources */,
+				3F58452326230100001F8A66 /* Frameworks */,
+				3F58452426230100001F8A66 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3F58452826230100001F8A66 /* PBXTargetDependency */,
+			);
+			name = MTGeoCodeUITests;
+			productName = MTGeoCodeUITests;
+			productReference = 3F58452626230100001F8A66 /* MTGeoCodeUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3F5844F8262300FE001F8A66 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					3F5844FF262300FE001F8A66 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					3F58451A26230100001F8A66 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 3F5844FF262300FE001F8A66;
+					};
+					3F58452526230100001F8A66 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 3F5844FF262300FE001F8A66;
+					};
+				};
+			};
+			buildConfigurationList = 3F5844FB262300FE001F8A66 /* Build configuration list for PBXProject "MTGeoCode" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3F5844F7262300FE001F8A66;
+			productRefGroup = 3F584501262300FE001F8A66 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3F5844FF262300FE001F8A66 /* MTGeoCode */,
+				3F58451A26230100001F8A66 /* MTGeoCodeTests */,
+				3F58452526230100001F8A66 /* MTGeoCodeUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3F5844FE262300FE001F8A66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F58451326230100001F8A66 /* LaunchScreen.storyboard in Resources */,
+				3F58451026230100001F8A66 /* Assets.xcassets in Resources */,
+				3F58450E262300FE001F8A66 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F58451926230100001F8A66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F58452426230100001F8A66 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		FD0D4594E12AC0E917EC234D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MTGeoCode-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3F5844FC262300FE001F8A66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F58454F26230838001F8A66 /* MMTGeoCodeView.m in Sources */,
+				3F58450B262300FE001F8A66 /* GeoCodeViewController.m in Sources */,
+				3F584542262304D3001F8A66 /* ReverseGeoCodeViewController.m in Sources */,
+				3F584505262300FE001F8A66 /* AppDelegate.m in Sources */,
+				3F58451626230100001F8A66 /* main.m in Sources */,
+				3F584508262300FE001F8A66 /* SceneDelegate.m in Sources */,
+				3F5845582623085A001F8A66 /* MMTReverseGeoCodeView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F58451726230100001F8A66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F58452026230100001F8A66 /* MTGeoCodeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3F58452226230100001F8A66 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F58452B26230100001F8A66 /* MTGeoCodeUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3F58451D26230100001F8A66 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3F5844FF262300FE001F8A66 /* MTGeoCode */;
+			targetProxy = 3F58451C26230100001F8A66 /* PBXContainerItemProxy */;
+		};
+		3F58452826230100001F8A66 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3F5844FF262300FE001F8A66 /* MTGeoCode */;
+			targetProxy = 3F58452726230100001F8A66 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3F58450C262300FE001F8A66 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3F58450D262300FE001F8A66 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3F58451126230100001F8A66 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3F58451226230100001F8A66 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3F58452D26230100001F8A66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3F58452E26230100001F8A66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3F58453026230100001F8A66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C3722A1A04455C975879D6F /* Pods-MTGeoCode.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MTGeoCode/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.qxs.MTGeoCode;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3F58453126230100001F8A66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A7083F20F693CAD70B861A2 /* Pods-MTGeoCode.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MTGeoCode/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.qxs.MTGeoCode;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3F58453326230100001F8A66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MTGeoCodeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.qxs.MTGeoCodeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MTGeoCode.app/MTGeoCode";
+			};
+			name = Debug;
+		};
+		3F58453426230100001F8A66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MTGeoCodeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.qxs.MTGeoCodeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MTGeoCode.app/MTGeoCode";
+			};
+			name = Release;
+		};
+		3F58453626230100001F8A66 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MTGeoCodeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.qxs.MTGeoCodeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MTGeoCode;
+			};
+			name = Debug;
+		};
+		3F58453726230100001F8A66 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MTGeoCodeUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.qxs.MTGeoCodeUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MTGeoCode;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3F5844FB262300FE001F8A66 /* Build configuration list for PBXProject "MTGeoCode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F58452D26230100001F8A66 /* Debug */,
+				3F58452E26230100001F8A66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3F58452F26230100001F8A66 /* Build configuration list for PBXNativeTarget "MTGeoCode" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F58453026230100001F8A66 /* Debug */,
+				3F58453126230100001F8A66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3F58453226230100001F8A66 /* Build configuration list for PBXNativeTarget "MTGeoCodeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F58453326230100001F8A66 /* Debug */,
+				3F58453426230100001F8A66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3F58453526230100001F8A66 /* Build configuration list for PBXNativeTarget "MTGeoCodeUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F58453626230100001F8A66 /* Debug */,
+				3F58453726230100001F8A66 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3F5844F8262300FE001F8A66 /* Project object */;
+}
