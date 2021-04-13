@@ -47,24 +47,12 @@
 }
 
 - (void)pushViewController {
-    [self.navigationController pushViewController:self.reverseViewController animated:YES];
+    [self.navigationController pushViewController:self.reverseViewController animated:NO];
 }
 
 #pragma mark - geoCodeViewButton
 - (void)geoCodeViewButton {
-    CLGeocoder *coder = [[CLGeocoder alloc] init];
-    
-    [coder geocodeAddressString:self.geoCodeView.adressTextFild.text completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
-        if (placemarks.count == 0 || error) {
-            NSLog(@"解析出错");
-            self.geoCodeView.detailAdressValue.text = @"解析出错";
-        }
-        for (CLPlacemark *placemark in placemarks) {
-            CLLocation *location = placemark.location;
-            [self.geoCodeView adverseGeoCodeWithLat:location.coordinate.latitude andLog:location.coordinate.longitude  andAdressName:placemark.name];
-        }
-    }];
-    
+    [self.geoCodeView adverseGeoCoding];
     [self.geoCodeView endEditing:YES];
 }
 

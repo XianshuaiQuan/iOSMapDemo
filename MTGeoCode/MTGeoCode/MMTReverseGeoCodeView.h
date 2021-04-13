@@ -11,6 +11,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface MMTReverseGeoCodeView : UIView
 
+@property (nonatomic, strong) UIButton *reverseGeoCoder;
+
+- (void)reverseGeoCoding;
+
 @end
 
 NS_ASSUME_NONNULL_END

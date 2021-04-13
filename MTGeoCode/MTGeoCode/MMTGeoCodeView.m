@@ -11,9 +11,15 @@
 
 @interface MMTGeoCodeView()<UITextFieldDelegate>
 
+@property (nonatomic, strong) UITextField *adressTextFild;
+@property (nonatomic, strong) UILabel *latValue;
+@property (nonatomic, strong) UILabel *detailAdressValue;
+@property (nonatomic, strong) UILabel *logValue;
 @property (nonatomic, strong) UILabel *latName;
 @property (nonatomic, strong) UILabel *logName;
 @property (nonatomic, strong) UILabel *detailAdressName;
+
+@property (nonatomic, strong) CLGeocoder *geoCoder;
 
 @end
 
@@ -97,12 +103,21 @@
 }
 
 #pragma mark - buttonAction
-- (void)adverseGeoCodeWithLat:(CGFloat)lat andLog:(CGFloat)log andAdressName:(NSString *)name   {
-    self.latValue.text = [NSString stringWithFormat:@"%f",lat];
-    self.logValue.text = [NSString stringWithFormat:@"%f",log];
-    self.detailAdressValue.text = name;
+- (void)adverseGeoCoding {
+    [self.geoCoder geocodeAddressString:self.adressTextFild.text completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
+        if (placemarks.count == 0 || error) {
+            NSLog(@"解析出错");
+            self.detailAdressValue.text = @"解析出错";
+            return;
+        }
+        for (CLPlacemark *placemark in placemarks) {
+            CLLocation *location = placemark.location;
+            self.latValue.text = [NSString stringWithFormat:@"%f",location.coordinate.latitude];
+            self.logValue.text = [NSString stringWithFormat:@"%f",location.coordinate.longitude];
+            self.detailAdressValue.text = placemark.name;
+        }
+    }];
 }
-
 
 #pragma mark - lazy
 - (UITextField *)adressTextFild {
@@ -185,5 +200,12 @@
 //        _detailAdressValue.backgroundColor = [UIColor greenColor];
     }
     return _detailAdressValue;
+}
+
+- (CLGeocoder *)geoCoder {
+    if (!_geoCoder) {
+        _geoCoder = [[CLGeocoder alloc] init];
+    }
+    return _geoCoder;
 }
 @end
