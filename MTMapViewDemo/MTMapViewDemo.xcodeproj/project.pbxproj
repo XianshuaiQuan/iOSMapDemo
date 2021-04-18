@@ -16,6 +16,8 @@
 		3F8FE47D262855CF000B7D86 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8FE47C262855CF000B7D86 /* main.m */; };
 		3F8FE487262855CF000B7D86 /* MTMapViewDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8FE486262855CF000B7D86 /* MTMapViewDemoTests.m */; };
 		3F8FE492262855CF000B7D86 /* MTMapViewDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8FE491262855CF000B7D86 /* MTMapViewDemoUITests.m */; };
+		3F8FE4AA262856B6000B7D86 /* MMCMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F8FE4A9262856B6000B7D86 /* MMCMapView.m */; };
+		3F8FE4B3262856D2000B7D86 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F8FE4B2262856D2000B7D86 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,9 @@
 		3F8FE48D262855CF000B7D86 /* MTMapViewDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MTMapViewDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F8FE491262855CF000B7D86 /* MTMapViewDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MTMapViewDemoUITests.m; sourceTree = "<group>"; };
 		3F8FE493262855CF000B7D86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F8FE4A8262856B6000B7D86 /* MMCMapView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MMCMapView.h; sourceTree = "<group>"; };
+		3F8FE4A9262856B6000B7D86 /* MMCMapView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMCMapView.m; sourceTree = "<group>"; };
+		3F8FE4B2262856D2000B7D86 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F8FE4B3262856D2000B7D86 /* CoreLocation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +94,7 @@
 				3F8FE485262855CF000B7D86 /* MTMapViewDemoTests */,
 				3F8FE490262855CF000B7D86 /* MTMapViewDemoUITests */,
 				3F8FE468262855CE000B7D86 /* Products */,
+				3F8FE4B1262856D2000B7D86 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,17 +111,11 @@
 		3F8FE469262855CE000B7D86 /* MTMapViewDemo */ = {
 			isa = PBXGroup;
 			children = (
-				3F8FE46A262855CE000B7D86 /* AppDelegate.h */,
-				3F8FE46B262855CE000B7D86 /* AppDelegate.m */,
-				3F8FE46D262855CE000B7D86 /* SceneDelegate.h */,
-				3F8FE46E262855CE000B7D86 /* SceneDelegate.m */,
 				3F8FE470262855CE000B7D86 /* ViewController.h */,
 				3F8FE471262855CE000B7D86 /* ViewController.m */,
-				3F8FE473262855CE000B7D86 /* Main.storyboard */,
-				3F8FE476262855CF000B7D86 /* Assets.xcassets */,
-				3F8FE478262855CF000B7D86 /* LaunchScreen.storyboard */,
-				3F8FE47B262855CF000B7D86 /* Info.plist */,
-				3F8FE47C262855CF000B7D86 /* main.m */,
+				3F8FE4A726285678000B7D86 /* View */,
+				3F8FE4A3262855EA000B7D86 /* AppLifeTime */,
+				3F8FE4A2262855E0000B7D86 /* Others */,
 			);
 			path = MTMapViewDemo;
 			sourceTree = "<group>";
@@ -135,6 +136,46 @@
 				3F8FE493262855CF000B7D86 /* Info.plist */,
 			);
 			path = MTMapViewDemoUITests;
+			sourceTree = "<group>";
+		};
+		3F8FE4A2262855E0000B7D86 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				3F8FE473262855CE000B7D86 /* Main.storyboard */,
+				3F8FE476262855CF000B7D86 /* Assets.xcassets */,
+				3F8FE478262855CF000B7D86 /* LaunchScreen.storyboard */,
+				3F8FE47B262855CF000B7D86 /* Info.plist */,
+				3F8FE47C262855CF000B7D86 /* main.m */,
+			);
+			name = Others;
+			sourceTree = "<group>";
+		};
+		3F8FE4A3262855EA000B7D86 /* AppLifeTime */ = {
+			isa = PBXGroup;
+			children = (
+				3F8FE46A262855CE000B7D86 /* AppDelegate.h */,
+				3F8FE46B262855CE000B7D86 /* AppDelegate.m */,
+				3F8FE46D262855CE000B7D86 /* SceneDelegate.h */,
+				3F8FE46E262855CE000B7D86 /* SceneDelegate.m */,
+			);
+			name = AppLifeTime;
+			sourceTree = "<group>";
+		};
+		3F8FE4A726285678000B7D86 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3F8FE4A8262856B6000B7D86 /* MMCMapView.h */,
+				3F8FE4A9262856B6000B7D86 /* MMCMapView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		3F8FE4B1262856D2000B7D86 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3F8FE4B2262856D2000B7D86 /* CoreLocation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,6 +311,7 @@
 				3F8FE46C262855CE000B7D86 /* AppDelegate.m in Sources */,
 				3F8FE47D262855CF000B7D86 /* main.m in Sources */,
 				3F8FE46F262855CE000B7D86 /* SceneDelegate.m in Sources */,
+				3F8FE4AA262856B6000B7D86 /* MMCMapView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
