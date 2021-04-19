@@ -8,6 +8,7 @@
 #import "ViewController.h"
 #import "MMCMapView.h"
 #import <CoreLocation/CoreLocation.h>
+#import "MMCAnnotationModel.h"
 
 @interface ViewController ()<MKMapViewDelegate>
 
@@ -48,6 +49,7 @@
             return ;
         }
         NSString *subtitleName = [NSString stringWithFormat:@"%@%@%@",placemarks.lastObject.administrativeArea,placemarks.lastObject.locality,placemarks.lastObject.subLocality];
+        
         userLocation.title = placemarks.lastObject.name;
         userLocation.subtitle = subtitleName;
     }];
@@ -57,20 +59,45 @@
 
 //添加大头针视图
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
-    static NSString *identifier = @"MKAnnotationViewIdentifier";
-    MKAnnotationView *pinAnnotationView = [mapView dequeueReusableAnnotationViewWithIdentifier:identifier];
-    if (!pinAnnotationView) {
-        MKPointAnnotation *pointAnnotation = [[MKPointAnnotation alloc] initWithCoordinate:self.mapView.userLocation.location.coordinate title:@"" subtitle:@""];
-        pinAnnotationView = [[MKPinAnnotationView alloc] initWithAnnotation:pointAnnotation reuseIdentifier:identifier];
-        pinAnnotationView.canShowCallout = YES;
+    //判断是系统自带的还是用户自定义的(MKUserrLocation 是系统大头针模型)
+    if ([annotation isKindOfClass:[MKUserLocation class]]) {
+        //如果是用户自定义，则返回nil，表示采用系统默认大头针模型
+        return nil;
     }
-    return pinAnnotationView;
+    
+    
+    static NSString *identifier = @"MKAnnotationViewIdentifier";
+    MKAnnotationView *annotationView = [mapView dequeueReusableAnnotationViewWithIdentifier:identifier];
+    if (!annotationView) {
+        //用户自定义大头针模型
+        MMCAnnotationModel *annotationModel = [[MMCAnnotationModel alloc] init];
+        annotationModel.coordinate = self.mapView.userLocation.location.coordinate;
+        
+        annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotationModel reuseIdentifier:identifier];
+        annotationView.canShowCallout = YES;
+    }
+    return annotationView;
 
 }
 
 //地图范围改变时调用
 - (void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated {
     
+}
+
+#pragma mark - touchBegin
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    //获取点击的点
+    CGPoint touchPoint = [[touches anyObject] locationInView:self.mapView];
+    //将点转化为经纬度
+    CLLocationCoordinate2D coordination = [self.mapView convertPoint:touchPoint toCoordinateFromView:self.mapView];
+    //添加大头针
+    MMCAnnotationModel *annotation = [[MMCAnnotationModel alloc] init];
+    annotation.coordinate = coordination;
+    annotation.title = @"aa";
+    annotation.subtitle = @"bb";
+    
+    [self.mapView addAnnotation:annotation];
 }
 
 #pragma mark - lazy
@@ -80,6 +107,7 @@
         _mapView.zoomEnabled = YES;
         _mapView.delegate = self;
         _mapView.showsUserLocation = YES;
+        _mapView.showsScale = YES;
     }
     return _mapView;
 }
